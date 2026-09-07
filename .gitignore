@@ -1,0 +1,16 @@
+build/
+*.hex
+*.elf
+*.eep
+*.map
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
