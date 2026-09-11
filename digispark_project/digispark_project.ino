@@ -1,4 +1,5 @@
-
+#include <DigiKeyboard.h>
+#include <iostream>
 
 //Organização de Funções
 
@@ -8,9 +9,25 @@ enum class OperatingSystem{
   Unknown
 };
 
-OperatingSystem detect_os();
+OperatingSystem detect_os(){
 
-void linux_block();
+  #ifdef _WIN32
+      return OperatingSystem::Windows;
+
+  #elif __linux__
+      return OperatingSystem::Linux;
+  
+  #else
+      return OperatingSystem::Unknown;
+
+  #endif
+}
+
+
+
+void linux_block(){
+
+};
 void windows_block();
 
 void open_terminal_linux();
@@ -41,3 +58,5 @@ int main(){
   }
   return 0;
 }
+
+
